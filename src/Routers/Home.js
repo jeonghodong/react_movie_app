@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Header from "../Components/Header";
 import Loader from "../Components/Loader";
 import Movies from "../Components/Movies";
 import styles from "./Home.module.css";
@@ -15,7 +14,6 @@ function Home() {
         setLoading(false);
       });
   }, []);
-  console.log(movies);
   return (
     <div>
       {loading ? (
