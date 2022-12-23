@@ -21,6 +21,9 @@
   font-size: 18px;
   font-weight: bold;
 }
+.container ul li:active {
+  color: red;
+}
 .container ul li i {
   font-size: 25px;
 }

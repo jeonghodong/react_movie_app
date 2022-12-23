@@ -16,7 +16,6 @@ function Detail() {
         setLoading(false);
       });
   }, [id]);
-  console.log(movie);
   return (
     <div>
       {loading ? (

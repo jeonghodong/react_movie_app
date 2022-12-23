@@ -7,22 +7,22 @@ function Header() {
     {
       id: 1,
       name: "High Rating",
-      path: "/minimum_rating=7",
+      path: "minimum_rating=9",
     },
     {
       id: 2,
       name: "Romance",
-      path: "/romance",
+      path: "genre=romance",
     },
     {
       id: 3,
       name: "Thriller",
-      path: "/thriller",
+      path: "genre=thriller",
     },
     {
       id: 4,
       name: "Animation",
-      path: "/animation",
+      path: "genre=animation",
     },
   ];
 
@@ -57,7 +57,7 @@ function Header() {
       <ul>
         {list.map((list) => (
           <li key={list.id}>
-            <Link to="/List">{list.name}</Link>
+            <Link to={`/${list.path}`}>{list.name}</Link>
           </li>
         ))}
       </ul>
