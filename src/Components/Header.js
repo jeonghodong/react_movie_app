@@ -7,22 +7,22 @@ function Header() {
     {
       id: 1,
       name: "High Rating",
-      src: "/highrating",
+      path: "/minimum_rating=7",
     },
     {
       id: 2,
       name: "Romance",
-      src: "/romance",
+      path: "/romance",
     },
     {
       id: 3,
       name: "Thriller",
-      src: "/thriller",
+      path: "/thriller",
     },
     {
       id: 4,
       name: "Animation",
-      src: "/animation",
+      path: "/animation",
     },
   ];
 
@@ -49,7 +49,6 @@ function Header() {
       rel: "noreferrer",
     },
   ];
-  console.log(social);
   return (
     <header className={styles.container}>
       <h1>
@@ -58,7 +57,7 @@ function Header() {
       <ul>
         {list.map((list) => (
           <li key={list.id}>
-            <Link to={list.src}>{list.name}</Link>
+            <Link to="/List">{list.name}</Link>
           </li>
         ))}
       </ul>

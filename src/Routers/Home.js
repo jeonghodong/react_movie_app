@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import Header from "../Components/Header";
 import Loader from "../Components/Loader";
 import Movies from "../Components/Movies";
 import styles from "./Home.module.css";
 
 function Home() {
+  const param = useParams();
+  console.log(param);
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
   useEffect(() => {
@@ -16,13 +19,13 @@ function Home() {
       });
   }, []);
   return (
-    <div className={styles.container}>
+    <div>
       {loading ? (
         <div>
           <Loader />
         </div>
       ) : (
-        <div className={styles.container}>
+        <div>
           <Header />
           <div className={styles.movies_container}>
             {movies.map((movies) => (
