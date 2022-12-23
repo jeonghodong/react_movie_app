@@ -53,6 +53,7 @@
   z-index: 200;
   padding: 2rem;
   animation: arrow 2s ease-in-out infinite;
+  cursor: pointer;
 }
 
 @keyframes arrow {

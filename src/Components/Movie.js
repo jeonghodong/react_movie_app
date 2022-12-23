@@ -1,14 +1,11 @@
 import React from "react";
 import styles from "./Movie.module.css";
-import { Link } from "react-router-dom";
 
-function Movie({ bgImg, coverImg, title, rating, runtime, like_count, trailer }) {
+function Movie({ bgImg, coverImg, title, rating, runtime, like_count, trailer, backClick }) {
   return (
     <>
-      <span className={styles.arrow_icon}>
-        <Link to="/">
-          <i class="fa-solid fa-arrow-left"></i>
-        </Link>
+      <span onClick={backClick} className={styles.arrow_icon}>
+        <i class="fa-solid fa-arrow-left"></i>
       </span>
       <img src={bgImg} alt="bgImg" className={styles.bgImg} />
       <div className={styles.movie}>

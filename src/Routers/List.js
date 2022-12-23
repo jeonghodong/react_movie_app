@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Header from "../Components/Header";
 import Lists from "../Components/Lists";
 import Loader from "../Components/Loader";
 import styles from "./List.module.css";
@@ -25,22 +24,19 @@ function List() {
           <Loader />
         </div>
       ) : (
-        <div>
-          <Header />
-          <div className={styles.movies_container}>
-            {movies.map((movies) => (
-              <Lists
-                id={movies.id}
-                key={movies.id}
-                coverImg={movies.medium_cover_image}
-                title={movies.title}
-                year={movies.year}
-                rating={movies.rating}
-                runtime={movies.runtime}
-                genres={movies.genres}
-              />
-            ))}
-          </div>
+        <div className={styles.movies_container}>
+          {movies.map((movies) => (
+            <Lists
+              id={movies.id}
+              key={movies.id}
+              coverImg={movies.medium_cover_image}
+              title={movies.title}
+              year={movies.year}
+              rating={movies.rating}
+              runtime={movies.runtime}
+              genres={movies.genres}
+            />
+          ))}
         </div>
       )}
     </div>
