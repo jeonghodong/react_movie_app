@@ -12,7 +12,7 @@ function Movie({ bgImg, coverImg, title, rating, runtime, like_count, trailer, b
         <div className={styles.left}>
           <img src={coverImg} alt="img" />
           <h2>{title}</h2>
-          <p>{`⭐${rating} | ⏰ ${runtime} Minutes | 👍${like_count}`}</p>
+          <p>{`⭐ ${rating} | ⏰ ${runtime} Minutes | 👍 ${like_count}`}</p>
         </div>
         <div className={styles.right}>
           <iframe
