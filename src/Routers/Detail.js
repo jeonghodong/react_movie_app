@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import styles from "./Detail.module.css";
 import Loader from "../Components/Loader";
 import Movie from "../Components/Movie";
 
@@ -30,7 +29,7 @@ function Detail() {
           <Loader />
         </div>
       ) : (
-        <div className={styles.container}>
+        <div>
           <Movie
             backClick={backClick}
             bgImg={movie.background_image}
