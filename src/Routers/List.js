@@ -8,6 +8,7 @@ function List() {
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
   const { detail } = useParams();
+
   useEffect(() => {
     setLoading(true);
     fetch(`https://yts.mx/api/v2/list_movies.json?${detail}&sort_by=year`)
@@ -17,6 +18,7 @@ function List() {
         setLoading(false);
       });
   }, [detail]);
+
   return (
     <div>
       {loading ? (

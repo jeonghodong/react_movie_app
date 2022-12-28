@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./Lists.module.css";
+import { onErrorImgSmall } from "../Functions/imgError";
 
 function Lists({ id, coverImg, title, year, rating, runtime, genres }) {
   return (
     <div className={styles.movies}>
-      <img src={coverImg} alt="coverimage" className={styles.movies_img} />
+      <img src={coverImg} onError={onErrorImgSmall} alt="coverimage" className={styles.movies_img} />
       <div>
         <h2 className={styles.movies_title}>
           <Link to={`/Detail/${id}`}>{title}</Link>

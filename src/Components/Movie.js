@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Movie.module.css";
+import { onErrorImgSmall, onErrorImgBig } from "../Functions/imgError";
 
 function Movie({ bgImg, coverImg, title, rating, runtime, like_count, trailer, backClick }) {
   return (
@@ -7,10 +8,10 @@ function Movie({ bgImg, coverImg, title, rating, runtime, like_count, trailer, b
       <span onClick={backClick} className={styles.arrow_icon}>
         <i class="fa-solid fa-arrow-left"></i>
       </span>
-      <img src={bgImg} alt="bgImg" className={styles.bgImg} />
+      <img src={bgImg} alt="bgImg" onError={onErrorImgBig} className={styles.bgImg} />
       <div className={styles.movie}>
         <div className={styles.left}>
-          <img src={coverImg} alt="img" />
+          <img src={coverImg} onError={onErrorImgSmall} alt="img" />
           <h2>{title}</h2>
           <p>{`⭐ ${rating} | ⏰ ${runtime} Minutes | 👍 ${like_count}`}</p>
         </div>
