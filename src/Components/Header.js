@@ -7,7 +7,7 @@ function Header() {
   return (
     <header className={styles.container}>
       <h1>
-        <Link to="/">Flex</Link>
+        <Link to="/">F l e x</Link>
       </h1>
       <ul>
         {list.map((list) => (
