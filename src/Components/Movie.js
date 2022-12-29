@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Movie.module.css";
 import { onErrorImgSmall, onErrorImgBig } from "../Functions/imgError";
+import PropTypes from "prop-types";
 
 function Movie({ bgImg, coverImg, title, rating, runtime, like_count, trailer, backClick }) {
   return (
@@ -28,5 +29,16 @@ function Movie({ bgImg, coverImg, title, rating, runtime, like_count, trailer, b
     </>
   );
 }
+
+Movie.propTypes = {
+  bgImg: PropTypes.string.isRequired,
+  coverImg: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  rating: PropTypes.number.isRequired,
+  runtime: PropTypes.number.isRequired,
+  like_count: PropTypes.number.isRequired,
+  trailer: PropTypes.string.isRequired,
+  backClick: PropTypes.func.isRequired,
+};
 
 export default Movie;

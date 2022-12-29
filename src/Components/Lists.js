@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./Lists.module.css";
 import { onErrorImgSmall } from "../Functions/imgError";
+import PropTypes from "prop-types";
 
 function Lists({ id, coverImg, title, year, rating, runtime, genres }) {
   return (
@@ -22,5 +23,15 @@ function Lists({ id, coverImg, title, year, rating, runtime, genres }) {
     </div>
   );
 }
+
+Lists.propTypes = {
+  id: PropTypes.number.isRequired,
+  coverImg: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  year: PropTypes.number.isRequired,
+  rating: PropTypes.number.isRequired,
+  runtime: PropTypes.number.isRequired,
+  genres: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
 
 export default Lists;

@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Movies.module.css";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 function Movies({ id, coverImg, title, year, rating, runtime, genres }) {
   return (
@@ -21,5 +22,15 @@ function Movies({ id, coverImg, title, year, rating, runtime, genres }) {
     </div>
   );
 }
+
+Movies.propTypes = {
+  id: PropTypes.number.isRequired,
+  coverImg: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  year: PropTypes.number.isRequired,
+  rating: PropTypes.number.isRequired,
+  runtime: PropTypes.number.isRequired,
+  genres: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
 
 export default Movies;
