@@ -1,0 +1,32 @@
+@import "../Scss/mixin";
+$shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25), 0 8px 16px -8px rgba(0, 0, 0, 0.3),
+  0 -6px 16px -6px rgba(0, 0, 0, 7.5);
+
+.header {
+  background-color: #24292f;
+  color: white;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 4.5rem 1rem 4.5rem;
+  z-index: 1;
+  box-shadow: $shadow;
+  & h1 {
+    font-weight: bold;
+    font-size: 40px;
+  }
+  & ul {
+    display: flex;
+    & li {
+      @include fontBox(18px, bold, 0 0 0 50px);
+      &:active {
+        color: red;
+      }
+      & i {
+        font-size: 25px;
+      }
+    }
+  }
+}

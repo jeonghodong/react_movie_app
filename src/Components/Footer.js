@@ -1,10 +1,10 @@
 import React from "react";
-import styles from "./Footer.module.css";
+import styles from "./Footer.module.scss";
 import { footer, social } from "../Data/footer_list";
 
 function Footer() {
   return (
-    <footer className={styles.container}>
+    <footer className={styles.footer}>
       <h2>{footer.logoName}</h2>
       <ul>
         {social.map((social) => (
@@ -15,7 +15,7 @@ function Footer() {
           </li>
         ))}
       </ul>
-      <div className={styles.footer}>
+      <div className={styles.footer_bottomName}>
         <span>{footer.bottomName}</span>
       </div>
     </footer>

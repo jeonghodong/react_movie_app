@@ -1,22 +1,22 @@
 import React from "react";
-import styles from "./Movie.module.css";
+import styles from "./Movie.module.scss";
 import { onErrorImgSmall, onErrorImgBig } from "../Functions/imgError";
 import PropTypes from "prop-types";
 
 function Movie({ bgImg, coverImg, title, rating, runtime, like_count, trailer, backClick }) {
   return (
-    <>
-      <span onClick={backClick} className={styles.arrow_icon}>
-        <i class="fa-solid fa-arrow-left"></i>
+    <div className="styles.movie">
+      <span onClick={backClick} className={styles.movie_arrow_icon}>
+        <i className="fa-solid fa-arrow-left"></i>
       </span>
-      <img src={bgImg} alt="bgImg" onError={onErrorImgBig} className={styles.bgImg} />
-      <div className={styles.movie}>
-        <div className={styles.left}>
+      <img src={bgImg} alt="bgImg" onError={onErrorImgBig} className={styles.movie_bgImg} />
+      <div className={styles.movie_box}>
+        <div className={styles.movie_box_left}>
           <img src={coverImg} onError={onErrorImgSmall} alt="img" />
           <h2>{title}</h2>
           <p>{`⭐ ${rating} | ⏰ ${runtime} Minutes | 👍 ${like_count}`}</p>
         </div>
-        <div className={styles.right}>
+        <div className={styles.movie_box_right}>
           <iframe
             src={`https://www.youtube.com/embed/${trailer}`}
             title="YouTube video player"
@@ -26,7 +26,7 @@ function Movie({ bgImg, coverImg, title, rating, runtime, like_count, trailer, b
           ></iframe>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

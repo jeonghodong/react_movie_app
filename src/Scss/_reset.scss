@@ -103,6 +103,8 @@ section {
 body {
   line-height: 1;
   font-family: "Poppins", sans-serif;
+  background-color: rgb(209, 209, 209);
+  height: 100%;
 }
 ol,
 ul {
@@ -134,9 +136,6 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
-}
-body {
-  height: 100%;
 }
 a,
 a:link,

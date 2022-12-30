@@ -1,0 +1,11 @@
+@mixin fontBox($font-size, $font-weight, $margin) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  margin: $margin;
+}
+
+@mixin flexBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

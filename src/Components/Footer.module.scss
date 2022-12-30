@@ -1,0 +1,33 @@
+@import "../Scss/mixin";
+$shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25), 0 8px 16px -8px rgba(0, 0, 0, 0.3),
+  0 -6px 16px -6px rgba(0, 0, 0, 7.5);
+
+.footer {
+  @include flexBox;
+  padding-top: 20px;
+  background-color: #24292f;
+  color: #b6d8c6;
+  flex-direction: column;
+  box-shadow: $shadow;
+  & h2 {
+    @include fontBox(3rem, bold, "");
+  }
+  & ul {
+    @include flexBox;
+    margin: 2rem 0 2rem 0;
+    & li {
+      @include fontBox(2.5rem, "", 0 0 0 2rem);
+      &:nth-child(1) {
+        margin-left: 0px;
+      }
+    }
+  }
+  &_bottomName {
+    @include flexBox;
+    background-color: #15181b;
+    width: 100%;
+    padding: 1rem 0 1rem 0;
+    font-size: 0.8rem;
+    color: white;
+  }
+}

@@ -1,11 +1,11 @@
 import React from "react";
-import styles from "./Header.module.css";
+import styles from "./Header.module.scss";
 import { Link } from "react-router-dom";
 import { list, social } from "../Data/header_list";
 
 function Header() {
   return (
-    <header className={styles.container}>
+    <header className={styles.header}>
       <h1>
         <Link to="/">F l e x</Link>
       </h1>

@@ -21,7 +21,7 @@ function Home() {
           <Loader />
         </div>
       ) : (
-        <div className={styles.movies_container}>
+        <div className={styles.movies}>
           {movies.map((movies) => (
             <Movies
               id={movies.id}
