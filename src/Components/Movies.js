@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Movies.module.scss";
+import styles from "./Movies-Lists.module.scss";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Loader from "../Components/Loader";
 import Movies from "../Components/Movies";
-import styles from "./Home.module.css";
+import styles from "./Home-List.module.scss";
 
 function Home() {
   const [loading, setLoading] = useState(true);

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styles from "./Lists.module.scss";
+import styles from "./Movies-Lists.module.scss";
 import { onErrorImgSmall } from "../Functions/imgError";
 import PropTypes from "prop-types";
 
