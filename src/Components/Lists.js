@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Movies-Lists.module.scss";
 import { onErrorImgSmall } from "../Functions/imgError";
 import PropTypes from "prop-types";
+import fadeIn from "../Functions/fadeIn";
 
 function Lists({ id, coverImg, title, year, rating, runtime, genres }) {
+  const bg = useRef();
+  useLayoutEffect(() => {
+    fadeIn(bg);
+  }, []);
   return (
-    <div className={styles.movies}>
+    <div ref={bg} className={styles.movies}>
       <img src={coverImg} onError={onErrorImgSmall} alt="coverimage" className={styles.movies_img} />
       <div>
         <h2 className={styles.movies_title}>

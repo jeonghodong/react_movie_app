@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import styles from "./Movies-Lists.module.scss";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import fadeIn from "../Functions/fadeIn";
 
 function Movies({ id, coverImg, title, year, rating, runtime, genres }) {
+  const bg = useRef();
+  useLayoutEffect(() => {
+    fadeIn(bg);
+  }, []);
   return (
-    <div className={styles.movies}>
+    <div ref={bg} className={styles.movies}>
       <div>
         <img src={coverImg} alt="coverimage" className={styles.movies_img} />
       </div>
