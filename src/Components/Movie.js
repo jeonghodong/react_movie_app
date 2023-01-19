@@ -1,26 +1,10 @@
 import styles from "./Movie.module.scss";
 import { onErrorImgSmall, onErrorImgBig } from "../Functions/imgError";
 import PropTypes from "prop-types";
-import { useLayoutEffect, useRef } from "react";
 
 function Movie({ bgImg, coverImg, title, rating, runtime, like_count, trailer, backClick }) {
-  const bg = useRef();
-  useLayoutEffect(() => {
-    bg.current.animate(
-      [
-        // keyframes
-        { opacity: "0" },
-        { opacity: "1" },
-      ],
-      {
-        // timing options
-        duration: 1000,
-        iterations: 2,
-      }
-    );
-  }, []);
   return (
-    <div ref={bg} className="styles.movie">
+    <div className="styles.movie">
       <span onClick={backClick} className={styles.movie_arrow_icon}>
         <i className="fa-solid fa-arrow-left"></i>
       </span>
