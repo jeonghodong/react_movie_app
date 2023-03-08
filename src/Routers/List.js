@@ -14,6 +14,7 @@ function List() {
     fetch(`https://yts.mx/api/v2/list_movies.json?${detail}&sort_by=year`)
       .then((res) => res.json())
       .then((json) => {
+        // console.log(json.data.movies)
         setMovies(json.data.movies);
         setLoading(false);
       });

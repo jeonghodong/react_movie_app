@@ -9,6 +9,7 @@ function Lists({ id, coverImg, title, year, rating, runtime, genres }) {
   const bg = useRef();
   useLayoutEffect(() => {
     fadeIn(bg);
+
   }, []);
   return (
     <div ref={bg} className={styles.movies}>
@@ -20,9 +21,7 @@ function Lists({ id, coverImg, title, year, rating, runtime, genres }) {
         <p className={styles.movies_year}>{year}</p>
         <p>{`⭐${rating} | ⏰ ${runtime} Minutes`}</p>
         <ul className={styles.movies_genres}>
-          {genres.map((v) => (
-            <li key={v}>{v}</li>
-          ))}
+          {genres && genres.map((v) => <li>{v}</li>)}
         </ul>
       </div>
     </div>
