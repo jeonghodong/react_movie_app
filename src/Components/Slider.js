@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useLayoutEffect, useRef } from "react";
 import "./Slider.css";
+import fadeIn from "../Functions/fadeIn";
 
 function Slider({ slides }) {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const bg = useRef();
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -11,8 +13,11 @@ function Slider({ slides }) {
     return () => clearInterval(intervalId);
   }, [currentSlide, slides.length]);
 
+  useLayoutEffect(() => {
+    fadeIn(bg);
+  }, []);
   return (
-    <div className="slider-container">
+    <div className="slider-container" ref={bg}>
       <div
         className="slider"
         style={{ backgroundImage: `url(${slides[currentSlide].imageUrl})` }}

@@ -8,10 +8,14 @@ import gravityImage from "../asset/그래비티.jpeg";
 import happyImage from "../asset/행복을찾아서.png";
 import avatarImage from "../asset/아바타2.jpeg";
 import hunImage from "../asset/100.jpeg";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
+  const navigate = useNavigate();
+
+
   useEffect(() => {
     fetch(`https://yts.mx/api/v2/list_movies.json?minimum_rating=8.5&sort_by=year`)
       .then((res) => res.json())
@@ -20,6 +24,11 @@ function Home() {
         setLoading(false);
       });
   }, []);
+
+  useEffect(() => {
+    navigate('/');
+  }, [navigate]);
+
   const slides = [
     {
       id: 1,
