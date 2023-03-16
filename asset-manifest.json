@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react_movie_app/static/css/main.022bad66.css",
-    "main.js": "/react_movie_app/static/js/main.8d23e7e7.js",
+    "main.css": "/react_movie_app/static/css/main.82e22b9d.css",
+    "main.js": "/react_movie_app/static/js/main.65e01197.js",
     "static/media/행복을찾아서.png": "/react_movie_app/static/media/행복을찾아서.f919be5d774991617462.png",
     "static/media/아바타2.jpeg": "/react_movie_app/static/media/아바타2.29803153d2106cb58862.jpeg",
     "static/media/인터스텔라.jpeg": "/react_movie_app/static/media/인터스텔라.8e7c6b7b3932f7b66551.jpeg",
@@ -10,11 +10,11 @@
     "static/media/Default_bg2.png": "/react_movie_app/static/media/Default_bg2.639f7d653baf2dc22276.png",
     "static/media/Default_bg.png": "/react_movie_app/static/media/Default_bg.5d8cf8f539fb6d82c4f4.png",
     "index.html": "/react_movie_app/index.html",
-    "main.022bad66.css.map": "/react_movie_app/static/css/main.022bad66.css.map",
-    "main.8d23e7e7.js.map": "/react_movie_app/static/js/main.8d23e7e7.js.map"
+    "main.82e22b9d.css.map": "/react_movie_app/static/css/main.82e22b9d.css.map",
+    "main.65e01197.js.map": "/react_movie_app/static/js/main.65e01197.js.map"
   },
   "entrypoints": [
-    "static/css/main.022bad66.css",
-    "static/js/main.8d23e7e7.js"
+    "static/css/main.82e22b9d.css",
+    "static/js/main.65e01197.js"
   ]
 }
