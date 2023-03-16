@@ -53,7 +53,7 @@ function Home() {
     {
       id: 5,
       imageUrl: hunImage,
-      title: "Slide 4"
+      title: "Slide 5"
     },
   ];
   return (

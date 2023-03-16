@@ -11,8 +11,9 @@ function App() {
       <Routes>
         <Route>
           <Route element={<Default />}>
-            <Route path="/:detail" element={<List />} />
+            <Route path="/react_movie_app" element={<Home />} />
             <Route path="/" element={<Home />} />
+            <Route path="/:detail" element={<List />} />
           </Route>
           <Route path="/Detail/:id" element={<Detail />} />
         </Route>
